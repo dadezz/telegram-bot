@@ -1,3 +1,5 @@
+#pip install python-telegram-bot
+
 from telegram.ext import Updater, CommandHandler, MessageHandler, Filters
 import genfromtxt
 
