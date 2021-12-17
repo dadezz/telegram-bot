@@ -1,7 +1,7 @@
 # telegram-bot: @Bastiat_Bot
 
 Ho provato a fare questo bot per telegram, la mia prima prova.<br/><br/>
-Suo scopo è quello di mandare citazioni random di autori austriaci. Permette di aggiungere anche delle citazioni personalizzate (feature da migliorare)<br/><br/>
+Suo scopo è quello di mandare citazioni random di autori austriaci. Permette di aggiungere anche delle citazioni personalizzate (feature da migliorare, con molte criticità)<br/><br/>
 Possiede al momento 4 tipologie di comando:<br/>
 <ul>
   <li><tt>/help</tt> ritorna un piccolo messaggio di aiuto sul funzionamento del bot</li>
