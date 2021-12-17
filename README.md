@@ -9,4 +9,4 @@ Possiede al momento 4 tipologie di comando:<br/>
   <li><tt>/nuovacit citazione - comando</tt> permette di aggiungere una citazione personalizzata, da richiamare tramite apposito comando</li>
   <li><tt>/citami comando</tt> ritorna la citazione personalizzata associata a quello specifico comando</li>
 </ul>
-Questo è quanto. Nonostante non sia poi chissà che bot mi ritengo ugualmente soddisfatto
+</br>Questo è quanto. Nonostante non sia poi chissà che bot mi ritengo ugualmente soddisfatto
