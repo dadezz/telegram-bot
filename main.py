@@ -4,23 +4,6 @@ from telegram.ext import Updater, CommandHandler, MessageHandler, Filters
 import genfromtxt
 
 TOKEN="token"
-
-def aiuto(update, contest):
-     testo_aiuto = "1. Per inviare una citazione random di un autore \
-austriaco basta mandare un messaggio nella forma '/autore'\n\
-Gli autori attualmente supportati sono solo mises e bastiat, rispettivamente \
-/mises e /bastiat\n\n2. Per aggiungere una citazione personalizzata \
-il messaggio deve essere così impostato: '/nuovacit citazione - comando \
-per richiamarla'. Ad esempio: \n'/nuovacit no al baratto della \
-libertà con ordine - Mattarella 25/4/19'.\nSe tutto va bene, verrà registrata. \
-Una volta fatto ciò, per ricevere quella citazione come messaggio \
-basterà usare il comando '/citami comando per richiamarla', tornando \
-all'esempio di prima: '/citami Mattarella 25/4/19'\n\n\
-Questo è quanto. Al momento le citazioni personalizzate sono salvate in RAM, \
-quindi in caso di crash del bot verranno perse. Inoltre, una volta registrata \
-la citazione personalizzata, essa non potrà essere né cancellata né \
-modificata. Non preoccuparti, in futuro mi impegnerò a sistemare entrambi i problemi"
-     update.message.reply_text(testo_aiuto)
      
 def nuovacit(update, contest):
      text = update.message.text
@@ -55,6 +38,16 @@ def bastiat(update, context):
 def mises(update, context):
      frase = genfromtxt.cita_mises()
      update.message.reply_text(f'{frase}')
+
+def aiuto(update, contest):
+     testo_aiuto = "1. Per inviare una citazione random di un autore austriaco basta mandare un messaggio nella forma '/autore'\n\
+Gli autori attualmente supportati sono solo mises e bastiat, rispettivamente /mises e /bastiat\n\n2. Per aggiungere una citazione personalizzata \
+il messaggio deve essere così impostato: '/nuovacit citazione - comando per richiamarla'. Ad esempio: \n'/nuovacit no al baratto della \
+libertà con ordine - Mattarella 25/4/19'.\nSe tutto va bene, verrà registrata. Una volta fatto ciò, per ricevere quella citazione come messaggio \
+basterà usare il comando '/citami comando per richiamarla', tornando all'esempio di prima: '/citami Mattarella 25/4/19'\n\n\
+Questo è quanto. Al momento le citazioni personalizzate sono salvate in RAM, quindi in caso di crash del bot verranno perse. Inoltre, una volta registrata \
+la citazione personalizzata, essa non potrà essere né cancellata né modificata. Non preoccuparti, in futuro mi impegnerò a sistemare entrambi i problemi"
+     update.message.reply_text(testo_aiuto)
 
 def main():
      upd = Updater(TOKEN, use_context=True)
